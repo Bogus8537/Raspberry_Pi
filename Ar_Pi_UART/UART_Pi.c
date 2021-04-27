@@ -85,4 +85,4 @@ int main(){
 #endif //#ifdef RaspberryPi
 
 
-출처: https://creamp.tistory.com/3 [CreAmp]
+Source: https://creamp.tistory.com/3 [CreAmp]

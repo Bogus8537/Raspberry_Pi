@@ -1,5 +1,5 @@
 /*
- * This code was written for controlling 2 LEDS in RaspberryPi.
+ * This code was written for controlling 2 LEDs in RaspberryPi.
  * It used the "wiringPi.h" for using GPIO (Line 9).
  *
  * Don't forget to input "-lwiringPi" when you compile and make object code (gcc -o LED_Pi LED_Pi.c -lwiringPi).

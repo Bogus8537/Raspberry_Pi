@@ -9,7 +9,7 @@ void setup() {
   Serial.begin(9600);
   Serial.println("===== UART Ard-Pi =====");
 
-  Serial_F.begin(9600);
+  Serial_PI.begin(9600);
 }
 
 void loop() {

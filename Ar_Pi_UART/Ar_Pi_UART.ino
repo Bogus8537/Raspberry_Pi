@@ -1,9 +1,9 @@
 #include <SoftwareSerial.h>
 
-#define TXP 2
-#define RXP 3
+#define RXP 2
+#define TXP 3
 
-SoftwareSerial Serial_PI(TXP, RXP);
+SoftwareSerial Serial_PI(RXP, TXP);
 
 void setup() {
   Serial.begin(9600);

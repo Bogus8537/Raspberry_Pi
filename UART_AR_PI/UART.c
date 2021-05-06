@@ -8,7 +8,7 @@
  sudo ./Pi_Serial_Test.o
 */
  
-// just that the Arduino IDE doesnt compile these files.
+// Just that the Arduino IDE doesn't compile these files.
 // #ifdef RaspberryPi 
  
 //include system librarys

@@ -6,10 +6,10 @@
  Compile with:
  sudo gcc -o Pi_Serial_Test.o Pi_Serial_Test.cpp -lwiringPi -DRaspberryPi -pedantic -Wall
  sudo ./Pi_Serial_Test.o
- */
+*/
  
 // just that the Arduino IDE doesnt compile these files.
-#ifdef RaspberryPi 
+// #ifdef RaspberryPi 
  
 //include system librarys
 #include <stdio.h> //for printf
@@ -27,15 +27,16 @@
 // FTDI_PROGRAMMER "/dev/ttyUSB0"
 // HARDWARE_UART "/dev/ttyAMA0"
 char device[]= "/dev/ttyACM0";
+
 // filedescriptor
 int fd;
 unsigned long baud = 9600;
-unsigned long time=0;
+unsigned long time = 0;
  
 //prototypes
-int main(void);
-void loop(void);
-void setup(void);
+int main();
+void loop();
+void setup();
  
 void setup(){
  
@@ -57,9 +58,10 @@ void setup(){
 }
  
 void loop(){
-  // Pong every 3 seconds
-  if(millis()-time>=3000){
-    serialPuts (fd, "Pong!\n");
+  // TRF (Transfer) every 3 seconds
+  if(millis() - time >= 3000){
+    serialPuts (fd, "TRF!\n");
+   
     // you can also write data from 0-255
     // 65 is in ASCII 'A'
     serialPutchar (fd, 65);
@@ -82,7 +84,7 @@ int main(){
   return 0;
 }
  
-#endif //#ifdef RaspberryPi
+// #endif //#ifdef RaspberryPi
 
 
 /* Source: https://creamp.tistory.com/3 */

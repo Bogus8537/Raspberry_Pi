@@ -45,12 +45,12 @@ void setup()
 {
 	printf("===== Raspberry Pi started! =====\n\n");
 	
-	if( (fd = serialOpen(device, baud)) < 0 )                                   // 연결된 시리얼 장치를 열고, device초기화 & 통신속도를 9600 BPS로 설정
+	if( (fd = serialOpen(device, baud)) < 0 )                                   		// 연결된 시리얼 장치를 열고, device초기화 & 통신속도를 9600 BPS로 설정
 	{
-		fprintf(stderr, "Unable to open serial device : %s\n", strerror(errno));  // strerror : 오류번호를 설명하는 문자열을 가리키는 포인터를 반환
+		fprintf(stderr, "Unable to open serial device : %s\n", strerror(errno));  	// strerror : 오류번호를 설명하는 문자열을 가리키는 포인터를 반환
 		exit(1);								 								                                  // errno : system_call에서 오류의 원인을 나타내는 상수값을 저장
 	}
-	if(wiringPiSetup() == -1)                                                   // GPIO를 wiringPi모드로 설정 (wiringPi 시스템을 초기화 + wiringPi 핀 할당)
+	if(wiringPiSetup() == -1)                                                   		// GPIO를 wiringPi모드로 설정 (wiringPi 시스템을 초기화 + wiringPi 핀 할당)
 	{
 		fprintf(stdout, "Unable to start wiringPi : %s\n", strerror(errno));
 		exit(1);
@@ -59,15 +59,15 @@ void setup()
 
 void loop()
 {
-	if( millis() - time >= 3000)	      // millis() : 현재시간을 지정하는 함수
-	{								                    // if (millis() - time >= 3000) -> 3초마다 실행되도록 조건 설정
-		time = millis();			            // time변수에 현재 시간을 지정
+	if( millis() - time >= 3000)	      			// millis() : 현재시간을 지정하는 함수
+	{							// if (millis() - time >= 3000) -> 3초마다 실행되도록 조건 설정
+		time = millis();			        // time변수에 현재 시간을 지정
 	}
 	
-	if( serialDataAvail(fd) )			      // fd(연결된 시리얼 장치)가 읽을 수 있는 문자로 변환
+	if( serialDataAvail(fd) )			      	// fd(연결된 시리얼 장치)가 읽을 수 있는 문자로 변환
 	{
-		char newChar = serialGetchar(fd);	// fd(연결된 시리얼 장치)의 문자를 newchar에 저장 (출력!)
+		char newChar = serialGetchar(fd);		// fd(연결된 시리얼 장치)의 문자를 newchar에 저장 (출력!)
 		printf("%c", newChar);
-		fflush(stdout);					          // 출력 버퍼안에 있는 데이터를 출력장치에 전송하고 출력 버퍼 비우기
+		fflush(stdout);					// 출력 버퍼안에 있는 데이터를 출력장치에 전송하고 출력 버퍼 비우기
 	}
 }

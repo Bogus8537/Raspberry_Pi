@@ -6,10 +6,10 @@
 #include <wiringPi.h>
 #include <wiringSerial.h>
 
-char device[] = "/dev/ttyACM0"; // 라즈베리파이에 연결된 아두이노 포트 -> device변수에 저장
-int fd;							            // file descriptor 역할
-unsigned long baud = 9600;		  // 통신속도 9600 BPS로 설정
-unsigned long time = 0;			    // time 변수 초기화 (Line 61 ~ 64)
+char device[] = "/dev/ttyACM0"; 	// 라즈베리파이에 연결된 아두이노 포트 -> device변수에 저장
+int fd;					// file descriptor 역할
+unsigned long baud = 9600;		// 통신속도 9600 BPS로 설정
+unsigned long time = 0;			// time 변수 초기화 (Line 61 ~ 64)
 
 // 44행 & 46행에서 사용할 time = millis()위해 unsigned long형식을 지정
 // millis() 함수는 HW의 동작이 시작된 후로 경과된 시간을 1000분의 1초(millisecond)로 표현

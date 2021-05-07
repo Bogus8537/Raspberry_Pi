@@ -48,7 +48,7 @@ void setup()
 	if( (fd = serialOpen(device, baud)) < 0 )                                   		// 연결된 시리얼 장치를 열고, device초기화 & 통신속도를 9600 BPS로 설정
 	{
 		fprintf(stderr, "Unable to open serial device : %s\n", strerror(errno));  	// strerror : 오류번호를 설명하는 문자열을 가리키는 포인터를 반환
-		exit(1);								 								                                  // errno : system_call에서 오류의 원인을 나타내는 상수값을 저장
+		exit(1);								 	// errno : system_call에서 오류의 원인을 나타내는 상수값을 저장
 	}
 	if(wiringPiSetup() == -1)                                                   		// GPIO를 wiringPi모드로 설정 (wiringPi 시스템을 초기화 + wiringPi 핀 할당)
 	{

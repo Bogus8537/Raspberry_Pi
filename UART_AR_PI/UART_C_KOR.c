@@ -11,7 +11,7 @@ int fd;					// file descriptor 역할
 unsigned long baud = 9600;		// 통신속도 9600 BPS로 설정
 unsigned long time = 0;			// time 변수 초기화 (Line 62 ~ 65)
 
-// 44행 & 46행에서 사용할 time = millis()위해 unsigned long형식을 지정
+// 62행 & 65행에서 사용할 time = millis()위해 unsigned long형식을 지정
 // millis() 함수는 HW의 동작이 시작된 후로 경과된 시간을 1000분의 1초(millisecond)로 표현
 
 // 데이터 범위

@@ -28,7 +28,7 @@ unsigned long time = 0;			// time 변수 초기화 (Line 61 ~ 64)
 // unsigned long : 0 ~ 4,294,967,295
 // 아두이노기준
 // unsigend long 형식이 최대 범위로 약 50일동안 사용가능!
-// time 변수의 형식을 unsigned long형식으로 지정
+// 그런 이유로 time 변수의 형식을 unsigned long형식으로 지정
 
 void setup();
 void loop();

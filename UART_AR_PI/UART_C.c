@@ -25,7 +25,6 @@ int main()
 void setup()
 {
 	printf("===== Raspberry Pi started! =====\n\n");
-	//fflush(stdout);
 	
 	if( (fd = serialOpen(device, baud)) < 0 )
 	{
@@ -44,7 +43,6 @@ void loop()
 {
 	if( millis() - time >= 3000)
 	{
-		//serialPuts(fd, "TRF!\n");
 		time = millis();
 	}
 	
